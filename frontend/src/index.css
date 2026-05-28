@@ -1,0 +1,267 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Dark scrollbar elements */
+html.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+html.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  outline: none;
+  padding: 0;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.2s ease;
+}
+
+@media (max-width: 640px) {
+  .modal {
+    width: 95%;
+    max-width: none;
+    border-radius: 8px;
+  }
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Smooth global dark mode transitions */
+html, body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: #f8fafc;
+}
+
+/* Force global deep background in dark mode */
+html.dark body,
+html.dark .min-h-screen,
+html.dark .bg-gray-50,
+html.dark .bg-slate-50,
+html.dark [class*="bg-gradient-to-br"] {
+  background-color: #121212 !important; /* Pure Dark charcoal background */
+  background-image: none !important;
+}
+
+/* Dark Mode Card Background - Solid Neutral 900 */
+html.dark .bg-white,
+html.dark .bg-gray-50.rounded-xl,
+html.dark .bg-gray-50.rounded-2xl,
+html.dark .rounded-2xl,
+html.dark .rounded-xl {
+  background-color: #1e1e1e !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: #e4e4e7 !important;
+  border-color: #27272a !important;
+}
+
+/* Specific component overrides */
+html.dark header,
+html.dark nav,
+html.dark aside,
+html.dark .bg-white.border-r,
+html.dark .bg-white.border-b {
+  background-color: #1e1e1e !important;
+  backdrop-filter: none !important;
+  border-color: #27272a !important;
+}
+
+/* Navbar brand name color */
+.navbar-brand {
+  color: #c87830;
+}
+
+html.dark .navbar-brand {
+  color: #d08038 !important;
+}
+
+/* Transaction item text colors for dark mode */
+html.dark .transaction-desc {
+  color: #f4f4f5 !important;
+}
+
+html.dark .transaction-meta {
+  color: #a1a1aa !important;
+}
+
+/* Input Fields and Select Dropdowns */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1a1a1a !important;
+  color: #f4f4f5 !important;
+  border-color: #27272a !important;
+}
+
+html.dark input::placeholder {
+  color: #71717a !important;
+}
+
+html.dark input:focus,
+html.dark select:focus {
+  border-color: #c87830 !important;
+  box-shadow: 0 0 0 1px #c87830 !important;
+}
+
+/* Text and Typography Color Rules */
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: #f4f4f5 !important;
+}
+
+html.dark .text-gray-700,
+html.dark .text-gray-600 {
+  color: #d4d4d8 !important;
+}
+
+html.dark .text-gray-500,
+html.dark .text-gray-400,
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #a1a1aa !important;
+}
+
+/* Hover States and List Items */
+html.dark .hover\:bg-gray-50:hover,
+html.dark .hover\:bg-amber-50:hover {
+  background-color: #27272a !important;
+}
+
+/* Modals and Overlays */
+html.dark .modal,
+html.dark .modal-container,
+html.dark div[class*="modal"] {
+  background-color: #1e1e1e !important;
+  backdrop-filter: none !important;
+  color: #f4f4f5 !important;
+  border-color: #27272a !important;
+}
+
+/* Active states emulating active-orange accents */
+html.dark .text-teal-600,
+html.dark .text-sky-600,
+html.dark .text-orange-600 {
+  color: #d08038 !important;
+}
+
+html.dark .bg-teal-50,
+html.dark .bg-sky-50,
+html.dark .bg-orange-50 {
+  background-color: #7e3f12 !important; /* Deep active orange-brown in dark mode */
+  color: #ffffff !important;
+}
+
+html.dark .bg-teal-100,
+html.dark .bg-sky-100,
+html.dark .bg-orange-100 {
+  background-color: rgba(200, 120, 48, 0.4) !important;
+  color: #d08038 !important;
+}
+
+html.dark .bg-green-50 {
+  background-color: #1b5e20 !important; /* solid green */
+}
+
+html.dark .bg-orange-50 {
+  background-color: #7e3f12 !important; /* deep active orange-brown */
+}
+
+html.dark .bg-cyan-100 {
+  background-color: rgba(0, 96, 100, 0.4) !important;
+  color: #4dd0e1 !important;
+}
+
+/* SVG Chart & Gauge Styling */
+html.dark svg text {
+  fill: #e4e4e7 !important;
+}
+
+html.dark svg text.text-gray-800,
+html.dark svg text.text-gray-900 {
+  fill: #e4e4e7 !important;
+}
+
+html.dark svg text.text-gray-500,
+html.dark svg text.text-gray-400 {
+  fill: #a1a1aa !important;
+}
+
+/* Radial Gauge Background Track Override */
+html.dark .recharts-radial-bar-background-sector {
+  fill: #2d2d2d !important;
+}
+
+/* Grid & Border lines in charts */
+html.dark .recharts-cartesian-grid line {
+  stroke: #27272a !important;
+}
+
+/* Recharts Tooltip Text Color Override for Contrast */
+.recharts-default-tooltip,
+.recharts-default-tooltip *,
+.recharts-tooltip-item,
+.recharts-tooltip-item * {
+  color: #ffffff !important;
+}
+
+/* Shift Toastify Container to Clear Fixed Navbar */
+.Toastify__toast-container {
+  top: 80px !important;
+}
