@@ -578,7 +578,7 @@ const Welcome = () => {
               Automate your bookkeeping and expense tracking.
             </h2>
             <p className="text-sm sm:text-base text-zinc-450 max-w-xl mx-auto">
-              Test the real-time double-entry engine directly below. Expensio automates financial breakdowns with ultimate mobile responsiveness.
+            Try our live bookkeeping tool below. Expensio instantly sorts your finances for you.
             </p>
           </div>
 
@@ -867,7 +867,7 @@ const Welcome = () => {
               More than simple tracking
             </h2>
             <p className="text-xs sm:text-sm text-zinc-450 max-w-lg mx-auto">
-              Expensio packs state-of-the-art MERN architecture features, built specifically to prioritize performance, privacy, and visual excellence.
+              
             </p>
           </div>
 
