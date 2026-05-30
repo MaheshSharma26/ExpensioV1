@@ -269,12 +269,9 @@ const Welcome = () => {
           <div className="space-y-4 max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-6xl md:text-7xl xl:text-[5.5rem] font-extrabold tracking-tighter leading-[1.05] select-none text-white">
               <span className="bg-gradient-to-b from-white via-white via-20% to-zinc-400/90 bg-clip-text text-transparent">
-                Beautiful financial tracking
+                Expense Tracking 
               </span>
-              <br />
-              <span className="bg-gradient-to-b from-white via-white via-20% to-zinc-400/90 bg-clip-text text-transparent">
-                with automated analysis.
-              </span>
+              
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-zinc-450 max-w-2xl mx-auto leading-relaxed">
