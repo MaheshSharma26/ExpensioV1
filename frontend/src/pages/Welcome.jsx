@@ -275,7 +275,7 @@ const Welcome = () => {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-zinc-450 max-w-2xl mx-auto leading-relaxed">
-              Track your incomes, manage expenses, and isolate budgets over granular timeframe selectors. Perfect for students, professionals, and households.
+              Track your income, manage expenses, and separate budgets using detailed time selectors. This tool is ideal for students, professionals, and families.
             </p>
           </div>
 
