@@ -575,7 +575,7 @@ const Welcome = () => {
               📊 Ledger Controls
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-b from-white via-white via-20% to-zinc-400 bg-clip-text text-transparent leading-tight">
-              Automated Ledger & Classifications
+              Automate your bookkeeping and expense tracking.
             </h2>
             <p className="text-sm sm:text-base text-zinc-450 max-w-xl mx-auto">
               Test the real-time double-entry engine directly below. Expensio automates financial breakdowns with ultimate mobile responsiveness.
